@@ -1,0 +1,67 @@
+#ifndef COLA_H
+#define COLA_H
+
+template <typename T>
+class Nodo {
+public:
+	T data;
+	Nodo* next;
+	Nodo(T data, Nodo* next = nullptr) : data(data), next(next) {}
+};
+
+template <typename T>
+class Cola {
+	Nodo<T>* front = nullptr;
+	Nodo<T>* back = nullptr;
+	int len = 0;
+	//T data;
+
+public:
+	bool empty() {
+		return len == 0;
+	}
+	//AGREGAR ELEMENTOS
+	void EnQueue(T data) {
+
+		Nodo<T>* new_nodo = new Nodo<T>(data);
+
+		if (back == nullptr) {
+			front = new_nodo;
+			back = new_nodo;
+			return;
+		}
+
+		back->next = new_nodo;
+		back = new_nodo;
+		len++;
+	}
+
+	void deQueue() {
+
+		if (front == nullptr) return;
+
+		Nodo<T>* temp = front;
+
+		front = front->next;
+
+		//COLA VACIA
+		if (front == nullptr) {
+			back = nullptr;
+		}
+
+		free(temp);
+		len--;
+	}
+
+	T Front() {
+		return front->data;
+	}
+	T Back() {
+		return back->data;
+	}
+	int size() {
+		return len;
+	}
+};
+
+#endif // COLA_H

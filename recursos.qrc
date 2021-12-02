@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>imagenes/usuario.png</file>
+        <file>imagenes/WhatsApp Image 2020-09-30 at 6.43.37 PM.jpeg</file>
+        <file>imagenes/unknown.png</file>
+        <file>imagenes/LOGO_KEDNALL.png</file>
+        <file>imagenes/login-button-top-slots-casino-uk-300x150.png</file>
+        <file>imagenes/register-button-png-11_copy.png</file>
+        <file>imagenes/300819-Wickes-Log-In-TradePro-Icon.png</file>
+        <file>imagenes/1713924.png</file>
+        <file>imagenes/kendal2-removebg-preview.png</file>
+        <file>imagenes/pixlr-bg-result.png</file>
+    </qresource>
+</RCC>
